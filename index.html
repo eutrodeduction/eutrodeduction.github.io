@@ -36,6 +36,99 @@
       width: 100%;
       height: 100%;
     }
+    * {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
     </style>
   </head>
   <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
@@ -107,7 +200,53 @@
         </div>
         <!--Right Col-->
         <div class="md:w-3/5 py-6 text-center">
-          <img class="md:w-4/5 z-50" src="kisspng-biology-science-ecosystem-teacher-worksheet-ekoprojkt-5ce8d049d13b49.670629411558761545857.png" />
+          <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 6</div>
+              <img src="slideshow/1.jpeg" style="width:100%">
+              <div class="text">bivalve 1</div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 6</div>
+              <img src="slideshow/2.jpeg" style="width:100%">
+              <div class="text">bivalve 2</div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 6</div>
+              <img src="slideshow/3.jpeg" style="width:100%">
+              <div class="text">bivalve 3</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">4 / 6</div>
+              <img src="slideshow/4.jpeg" style="width:100%">
+              <div class="text">Baltic sea 1</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">5 / 6</div>
+              <img src="slideshow/5.jpeg" style="width:100%">
+              <div class="text">Baltic sea 2</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">6 / 6</div>
+              <img src="slideshow/6.jpeg" style="width:100%">
+              <div class="text">Baltic sea 3</div>
+            </div>
+          </div>
+          <br>
+          
+          <!-- The dots/circles -->
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
         </div>
       </div>
     </div>
@@ -457,7 +596,7 @@
         <div class="md:w-1/3 md:p-1 p-6 flex flex-col flex-shrink-0" style="width: 450px;">
           <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
             <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-                <div class="w-full flex pl-6">
+                <div class="w-full flex pl-6 py-2">
                     <p class="w-full text-gray-600 text-xs md:text-sm">
                         Dec 14 2021
                         
@@ -484,7 +623,7 @@
         <div class="md:w-1/3 md:p-1 p-6 flex flex-col flex-shrink-0" style="width: 450px;">
           <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
             <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-                <div class="w-full flex pl-6">
+                <div class="w-full flex pl-6 py-2">
                     <p class="w-full text-gray-600 text-xs md:text-sm">
                         Dec 12 2021
                         
@@ -512,7 +651,7 @@
         <div class="md:w-1/3 md:p-1 p-6 flex flex-col flex-shrink-0" style="width: 450px;">
           <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
             <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-                <div class="w-full flex pl-6">
+                <div class="w-full flex pl-6 py-2">
                     <p class="w-full text-gray-600 text-xs md:text-sm">
                         Dec 9 2021
                         
@@ -540,7 +679,7 @@
         <div class="md:w-1/3 md:p-1 md:p-1 p-6 flex flex-col flex-shrink-0" style="width: 450px;">
           <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
             <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-                <div class="w-full flex pl-6">
+                <div class="w-full flex pl-6 py-2">
                     <p class="w-full text-gray-600 text-xs md:text-sm">
                         Dec 8 2021
                         
@@ -568,7 +707,7 @@
         <div class="md:w-1/3 md:p-1 p-6 flex flex-col flex-shrink-0" style="width: 450px;">
           <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
             <a href="#" class="no-underline hover:no-underline">
-              <div class="w-full flex pl-6">
+              <div class="w-full flex pl-6 py-2">
                 <p class="w-full text-gray-600 text-xs md:text-sm">
                     Dec 5 2021
                     
@@ -871,6 +1010,20 @@
         }
         return false;
       }
+      var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
     </script>
   </body>
 </html>
