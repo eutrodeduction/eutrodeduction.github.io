@@ -18,6 +18,23 @@
       .gradient {
         background: linear-gradient(90deg, #33afd5 0%, #47b309 100%);
       }
+      .containerif {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    }
+
+    /* Then style the iframe to fit in the container div with full height and width */
+    .responsive-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
     </style>
   </head>
   <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
@@ -78,10 +95,10 @@
         <div class="flex flex-col md:w-2/5 justify-center items-start text-center md:text-left">
           <p class="uppercase tracking-loose w-full">This is a project submited for Newyork Junior Academy, by team Baltic Sea.</p>
           <h1 class="my-4 text-5xl font-bold leading-tight">
-            Using Bivalve Molluscs to Reduce Eutrophication
+            Reducing Eutrophication
           </h1>
           <p class="leading-normal text-2xl mb-8">
-            "Since eutrophication is such a large problem, it would be nearly impossible to solve just one aspect. Instead, there are many smaller parts that rely on each other. As mentioned in the hypothesis, a website has been developed to gather everything at one place, and to ease the process of spreading it. This is required in order to make a larger footprint and many sources claimed this to be key. It is also needed to collect funding and finance the project. The main parts of the solution are nitrogen traps and nutrient extraction through bivalves."
+            "Since eutrophication is such a large problem, it would be nearly impossible to solve just one aspect. This website has been developed to gather everything at one place, and spread awareness. This is required in order to make a larger footprint and many sources claimed this to be key. This website describes the main parts of the solution are nitrogen traps and nutrient extraction through bivalves."
           </p>
           <a href="https://www.instagram.com/team_baltic_sea/" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
             Follow us
@@ -89,7 +106,7 @@
         </div>
         <!--Right Col-->
         <div class="md:w-3/5 py-6 text-center">
-          <img class="md:w-4/5 z-50" src="e.png" />
+          <img class="md:w-4/5 z-50" src="kisspng-biology-science-ecosystem-teacher-worksheet-ekoprojkt-5ce8d049d13b49.670629411558761545857.png" />
         </div>
       </div>
     </div>
@@ -685,9 +702,10 @@
       <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
         Call to Action
       </h1>
-      <iframe width="1080" height="720" class="mx-auto"
-        src="https://www.youtube.com/embed/mLbDbmmV6Qc">
-        </iframe>
+      <div class="containerif">
+        <iframe class="responsive-iframe" src="https://www.youtube.com/embed/mLbDbmmV6Qc"></iframe>
+      </div>
+        
     </section>
     <!--Footer-->
     <footer class="gradient">
